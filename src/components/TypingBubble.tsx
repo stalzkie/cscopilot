@@ -1,18 +1,31 @@
-import React from "react";
-import { useTypewriter } from "../hook/useTypewriter";
+import React, { useEffect, useState } from "react";
 
 interface TypingBubbleProps {
   text: string;
 }
 
 const TypingBubble: React.FC<TypingBubbleProps> = ({ text }) => {
-  const typedText = useTypewriter(text, 25); // Reduced from 40ms to 25ms for faster typing
+  const [displayed, setDisplayed] = useState("");
 
-  return (
-    <div className="text-gray-100">
-      <p style={{ whiteSpace: "pre-wrap" }}>{typedText}</p>
-    </div>
-  );
+  useEffect(() => {
+    let i = 0;
+    let current = "";
+    setDisplayed(""); // Clear on new message
+
+    const interval = setInterval(() => {
+      if (i < text.length) {
+        current += text[i];
+        setDisplayed(current);
+        i++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 20);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return <p className="whitespace-pre-wrap">{displayed}</p>;
 };
 
 export default TypingBubble;

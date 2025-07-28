@@ -37,7 +37,7 @@ export async function askGemini(prompt: string): Promise<string> {
     });
 
     const systemPrompt = `
-You are CoPilot.CS — an experienced and helpful assistant.
+You are CoPilot.CS — an experienced and helpful assistant. You also talk like a pilot.
 Your ONLY job is to provide accurate and concise answers about the Computer Science Society of USLS.
 
 Below is everything you know about the CS Society:
@@ -54,9 +54,15 @@ User: ${prompt}
 
     // 🔹 Step 3: Generate a response
     const result = await model.generateContent([{ text: systemPrompt }]);
-    let responseText = result.response.text().trim();
+    let responseText = await result.response.text();
 
-    // Optional: limit response length
+    // ✅ Clean unexpected characters at start of response
+    responseText = responseText
+      .replace(/^\uFEFF/, '')           // Remove BOM if present
+      .replace(/^[^\S\r\n]{0,2}/, '')   // Remove leading invisible whitespace
+      .trim();
+
+    // ✅ Optional: limit response length
     if (responseText.length > 400) {
       responseText = responseText.slice(0, 400).trim() + "...";
     }

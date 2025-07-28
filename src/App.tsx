@@ -166,29 +166,16 @@ const App: React.FC = () => {
             <div className="bg-black/20 backdrop-blur-xl rounded-3xl border border-white/20 p-8">
               <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
                 {studentCards.map((student, index) => (
-                  <motion.div
+                  <DraggableCardBody
                     key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    className={student.className + " absolute flex flex-col items-center justify-center bg-neutral-700 rounded-lg shadow-md min-h-96 w-80"}
                   >
-                    <DraggableCardBody
-                      className={student.className + " absolute flex flex-col items-center justify-center bg-white/15 backdrop-blur-md rounded-xl shadow-2xl border border-white/30 min-h-96 w-80 hover:bg-white/25 transition-all duration-300 group cursor-grab active:cursor-grabbing"}
-                    >
-                      <div className="relative overflow-hidden rounded-lg w-full h-full">
-                        <img
-                          src={student.image}
-                          alt={student.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <h3 className="font-bold text-lg">{student.name}</h3>
-                          <p className="text-sm text-gray-200">{student.role}</p>
-                        </div>
-                      </div>
-                    </DraggableCardBody>
-                  </motion.div>
+                    <img
+                      src={student.image}
+                      alt={student.name}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </DraggableCardBody>
                 ))}
               </DraggableCardContainer>
             </div>

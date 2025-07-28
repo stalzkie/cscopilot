@@ -1,0 +1,438 @@
+===== University of St. La Salle (USLS) – Computer Science Society (CSS) =====
+
+--- Institution Overview ---
+• University of St. La Salle (USLS) is a private Catholic research university in Bacolod, Philippines, founded July 7, 1952 :contentReference[oaicite:1]{index=1}.
+• The College of Computing Studies (CCS) offers undergraduate programs in Computer Science, Information Technology, and Entertainment & Multimedia Computing :contentReference[oaicite:2]{index=2}.
+
+--- BS Computer Science Program (College of Computing Studies) ---
+• The BS in Computer Science program focuses on algorithmic foundations, computing theory, software engineering, game development, data science, AI, NLP, cloud, and mobile systems :contentReference[oaicite:3]{index=3}.
+• Program Educational Objectives include producing graduates who:
+  1. Play meaningful roles in software development or research,
+  2. Uphold ethical and professional standards locally and internationally,
+  3. Engage in lifelong learning, research, or advanced certification :contentReference[oaicite:4]{index=4}.
+• Program Learning Outcomes include:
+  - Applying computing, math, and domain knowledge;
+  - Designing complex algorithms and software systems;
+  - Adapting modern computing tools;
+  - Addressing information security;
+  - Developing for game consoles, mobile, desktop;
+  - Using data science methods;
+  - Engaging with AI, cloud, NLP;
+  - Communicating effectively;
+  - Following professional, legal, ethical practices; and
+  - Participating in research and multidisciplinary work :contentReference[oaicite:5]{index=5}.
+• The curriculum includes core courses such as:
+  CC101 (Computer Science Fundamentals), CC102/CC103 (Programming), CSP201 (2D Game Art), etc. :contentReference[oaicite:6]{index=6}.
+• Teaching methods include lectures, programming demos, guided hands‑on labs, independent project development, mentorship, internships, and case studies :contentReference[oaicite:7]{index=7}.
+
+===== Computer Science Society (CSS) @ USLS =====
+
+--- Mission & Purpose ---
+• CSS is the official organization of BS Computer Science students at USLS, aiming to promote computer literacy among members and the broader community via workshops and seminars :contentReference[oaicite:8]{index=8}.
+
+--- Officers & Onboarding ---
+• CSS hosted officer onboarding and team‑building on **July 12, 2025**, welcoming new officers led by the Human Relations department :contentReference[oaicite:9]{index=9}.
+• Recent social media posts referred to welcoming the new set of CSS officers as “Cultivators,” indicating roll‑out of the latest leadership team within the academic year 2024‑2025 :contentReference[oaicite:10]{index=10}.
+
+--- Major Events & Partnerships ---
+• **Game On USLS 2024** — Hackathon‑style game development competition held **September 20, 2024**, co‑organized by CSS and GDSC‑USLS at USLS Computer Science Lab. Roles included organizer Gian Aibo Chua Boyero and others (e.g. CTO John Roland Octavio) :contentReference[oaicite:11]{index=11}.
+• CSS‑USLS partnered with **UPV Komsai.Org** for their **Democratech Hackathon** during **Komsai Week 2025** :contentReference[oaicite:12]{index=12}.
+• Social media reflect regular updates: “unfolding a new chapter” and milestone reflections on their biggest events and member moments over the past year :contentReference[oaicite:13]{index=13}.
+• CSS issued a **Transparency Meeting** notice for all official members in academic year 2024‑2025 :contentReference[oaicite:14]{index=14}.
+
+--- Additional Facts ---
+• CSS is listed among other academic organizations at USLS such as the Computer Engineering student body (ICpEP), Information Technology Society, etc. :contentReference[oaicite:15]{index=15}.
+
+===== Suggested Knowledge‑Base Entries =====
+*USLS CSS – Officers (A.Y. 2024–2025)*  
+• Human Relations Department led onboarding on July 12, 2025  
+• New officers nicknamed “Cultivators” welcomed via social media (July 2025)
+
+*Major Events*  
+• Game On USLS 2024 – September 20, 2024 – Game hackathon at USLS Lab in partnership with GDSC‑USLS  
+• Partnership with UPV Komsai.Org for Democratech Hackathon (Komsai Week 2025)
+
+*Mission & Scope*  
+• Promote computer literacy through workshops and academic seminars
+
+*BSCS Program Overview*  
+• Program objectives, learning outcomes, core courses, teaching methods
+
+---
+--- Additional Events & Initiatives ---
+• **Liceo Career Fair 2025**: CSS participated in the inter-school event to represent USLS and showcase the BSCS program to potential enrollees. Held on February 24, 2025. :contentReference[oaicite:8]{index=8}
+• **DataCamp Donates Partnership**: CSS was selected as a DataCamp partner organization, offering its members free access to data science and AI courses under a limited scholarship program. :contentReference[oaicite:16]{index=16}
+• **Grand Terminal Member Appreciation**: In a reflective social media post, CSS looked back at its milestones through the lens of a bus terminal metaphor — symbolizing growth, farewells, and new destinations. :contentReference[oaicite:13]{index=13}
+
+--- Organizational Transparency & Engagement ---
+• A **Transparency Meeting** was held via Zoom in February 2025, reinforcing the org’s commitment to accountability and clear communication among members. :contentReference[oaicite:14]{index=14}
+• CSS regularly uses Facebook and Instagram to post major announcements, document milestones, and welcome new officers.
+
+--- Additional Events & Achievements ---
+
+• **Club Fair 2024 (HEU Lasallian Club Fair)** – September 9–13, 2024  
+  CSS clinched **Best Club Booth**, **Most Engaging Booth**, and won the **PaCLUBan Quiz Bee**, topping competitors in both presentation and academic quiz bee segments. :citeturn0search8
+
+• **Hack La Salle / Hackathon “HackLaSalle 2024”** – late 2024  
+  GDSC-USLS and CSS supported the university-wide hackathon focused on AI-driven innovations in sports tech. CSS students pitched working prototypes at the competition. :citeturn0search16
+
+• **Game On! USLS 2024** – September 20, 2024  
+  A hackathon orienting participants to design and develop games from scratch. Team roles included Organizer and CEO Gian Aibo Chua Boyero; CIO Josh Dane Labistre; CTO John Roland Octavio; CCO Cassandra Remedios Lorenzo; Graphics Lead Gabrielle Mia Chua; Marketing Lead Renli Novero; Communications Lead Jasmin Jamandre; and Project Manager Paul Corral. :citeturn0search4
+
+• **CS Gala 2025 “The Grand Terminal”** – Early 2025  
+  Celebratory social event (CS Gala 2025: The Grand Terminal) featuring keynote speeches, officer appreciations, and community bonding. Public posts teased content such as “Almost there, passengers! … 2 DAYS TO GO until CS Gala 2025: The Grand Terminal” :citeturn0search13
+
+• **Club Fair 2025 “Regency Royale: An Assembly of Kingdoms”** – Instagram promo announced CSS readiness for Club Fair 2025—an upcoming theme showcasing booth creativity, branding, and student engagement. :citeturn0search2
+
+--- Organizational Recognition & Visibility ---
+
+• CSS was nominated among the **Top 10 “Corps d’Elite” clubs of 2025**, vying for the Most Outstanding Academic Club award alongside ICpEP. :citeturn0search7
+
+• CSS presence includes vibrant social media recaps highlighting major milestones, candid member moments, and event behind-the-scenes storytelling—shared across Facebook and Instagram. :citeturn0search10
+
+--- Recent Achievements of USLS BS Computer Science Students ---
+
+• **Komsai Hack 2025 – DemocraTech**  
+  BSCS students from USLS secured **1st Place** in the national **Komsai Hack 2025: DemocraTech** competition. This recognition came via the USLS College of Computing Studies' official Facebook post. :citeturn0search2
+
+• **“SkipTrash” – Best Educational Game Award**  
+  A student team named *GameFriend Studios* (Joseph Mark Anthony Huelgas, Paul Anthony Faburada, Meltito Vagallon, Roston Labayen) won the **Best Educational Game Award** at the **Electronic Sports and Gaming Summit (ESGS) 2017 / Philippine Game Festival GameOn Challenge School Track**. Their game, *SkipTrash*, was showcased to over 20,000 attendees at SMX Mall of Asia. :citeturn0search9
+
+• **Best Game Art Direction Award**  
+  Fourth‑year BSCS students from USLS earned the **Best Game Art Direction Award** under the Computing Studies meritorious recognitions for AY 2023–2024. :citeturn0search6
+
+• **Meritorious Awards AY 2023–2024**  
+  Several BSCS students were acknowledged in the **Computing Studies Meritorious Awardees list** for A.Y. 2023–2024, as released by USLS CCS. :citeturn0search3
+
+• **Most Outstanding Academic Club Finalist – CSS**  
+  Although not exclusive to students, the **Computer Science Society (CSS)**—comprising BSCS students—was recognized as a **Most Outstanding Academic Club Finalist** and achieved full accreditation status recently. :citeturn0search5
+
+--- Additional Student Achievements & Competitions ---
+
+• **DisruptorX National Pitching Competition**  
+  USLS BS Computer Science was represented at the first-ever DisruptorX National Pitching Competition. Notably, Juliane Jane A. Jastia (BSCS 2) and Norbert M. Audines (BSCS 3) served as national finalists representing USLS and the Visayas region. :citeturn1search0turn1search3{index=0}
+
+• **DICT Philippine Startup Challenge 9 (Western Visayas Regional Pitching Competition)**  
+  Two USLS BSCS startup teams led by Miss Jade (faculty advisor) earned top placements in the regional DICT competition:  
+    - **Team Seraphim** – Regional Champion  
+    - **Team SeerAI** – 2nd Place, plus special awards  
+  This highlights USLS students’ startup competency and regional leadership. :citeturn0search11turn0search6{index=11}
+
+• **Startup Battle 2025 @ USLS (DICT‑hosted event)**  
+  Hosted at USLS on April 3, 2025, the Startup Battle was led by USLS Computing Studies and DICT Negros Occidental. BSCS students pitched startup ideas internally; winners advanced to regional DICT competitions. :citeturn1search1{index=1}
+
+• **CS Expo 3.0 – “Re: Play Game Jam”**  
+  As part of the annual CS Expo (2025), students participated in the "Re: Play Game Jam"—a creative game prototyping session organized by GDSC-USLS and CSS under Komsai Week programming. :citeturn0search4{index=4}
+
+• **GDG-USLS DevFest 2024**  
+  Held December 14, 2024 at Santuario de La Salle, the DevFest featured student talks and workshops. CSS and BSCS students showcased projects, including pitches that led into DisruptorX and Startup Battle entries. :citeturn1search2{index=2}
+
+--- Summary of Student Achievements (A.Y. 2024–2025) ---
+
+*DisruptorX Competition*  
+• National finalists: Juliane Jane A. Jastia (BSCS 2), Norbert M. Audines (BSCS 3) representing USLS.  
+
+*DICT Pitching Challenge*  
+• Team Seraphim – Regional Champion, Team SeerAI – Runner‑up + accolades.  
+
+*Startup Battle 2025 (on‑campus qualifier)*  
+• Held April 3, 2025 with winner(s) moving forward to regional competition.  
+
+*Game Development & Creative Events*  
+• "Re: Play Game Jam" at CS Expo 3.0 – internal student prototypes  
+• GDG-USLS DevFest 2024 – tech showcases and project demos  
+
+Computer Science Society - USLS
+Official List of Officers
+A.Y 2025 - 2026
+
+________________
+
+CLUB ADVISER: Mr. Julian Diego “Da Maps” Mapa
+
+________________
+
+
+EXECUTIVE OFFICERS
+
+
+Position
+	Full Name
+	Year, Course, Section
+	Student ID
+	Student Email
+	Executive President
+	LYNCOLIN DELIGERO
+	BSCS4B
+	2202108
+	s2202108@usls.edu.ph
+	Executive Vice-President
+	MIKAELLA BEA FUENTEBELLA
+	BSCS3C
+	2100900
+	s2100900@usls.edu.ph
+	Executive Secretary
+	ARWEN MICA ELLE PEREZ
+	BSCS2B
+	2401940
+	s2401940@usls.edu.ph
+	Executive Treasurer
+	WILFREDO PEREZ III
+	BSCS2A
+	2201837
+	s2201837@usls.edu.ph
+	
+
+________________
+
+
+DEPARTMENT OF HUMAN RELATIONS
+
+
+Position
+	Full Name
+	Year, Course, Section
+	Student ID
+	Student Email
+	Department Head
+	JOHN LEONARD ESPERANCILLA
+	BSCS4A
+	2010011
+	s2010011@usls.edu.ph
+	Department Undersecretaries
+	DYNZYL JAMES GANCHOON
+	BSCS4C
+	2200422
+	s2200422@usls.edu.ph
+	ALEAH JELEIN AREVALO
+	BSCS4C
+	1617074
+	s1617074@usls.edu.ph
+	ANDREW EROYLA
+	BSCS3B
+	2301947
+	s2301947@usls.edu.ph
+	JOSEPH ANDREW ONG
+	BSCS3B
+	2302124
+	s2302124@usls.edu.ph
+	CHRISTIAN MARIE ESPINOSA
+	BSCS2A
+	2400761
+	s2400761@usls.edu.ph
+	
+
+________________
+
+
+DEPARTMENT OF BUDGET AND FINANCE
+
+
+Position
+	Full Name
+	Year, Course, Section
+	Student ID
+	Student Email
+	Department Head
+	STALINGRAD DOLLOSA
+	BSCS4A
+	2120770
+	s2120770@usls.edu.ph
+	Department Undersecretaries
+	KHENJE TERNAL
+	BSCS2B
+	2401600
+	s2401600@usls.edu.ph
+	EMMAN GLEN WONG YAN
+	BSCS2B
+	2401875
+	s2401875@usls.edu.ph
+	RCYNDRIEL LEVAUGN PORTUGAL
+	BSCS1C
+	2100331
+	s2100331@usls.edu.ph
+	JOHN DAVID MORANDANTE
+	BSCS2B
+	2401838
+	s2401838@usls.edu.ph
+	
+
+________________
+
+
+DEPARTMENT OF PUBLIC RELATIONS
+
+
+Position
+	Full Name
+	Year, Course, Section
+	Student ID
+	Student Email
+	Department Co-Heads
+	NATHANIEL MANUEL CUALES
+	BSCS2A
+	2400569
+	s2400569@usls.edu.ph
+	JOSH DANE LABISTRE
+	BSCS3A
+	2300337
+	s2300337@usls.edu.ph
+	Department Undersecretaries
+	ALFRED ALCALA
+	BSCS3A
+	2100626
+	s2100626@usls.edu.ph
+	VAN RUSSEL CATAYONG
+	BSCS2B
+	2402190
+	s2402190@usls.edu.ph
+	LEIAN JOSHUA TOGORES
+	BSCS3A
+	2300392
+	s2300392@usls.edu.ph
+	CIELO MARIE ABETONG
+	BSCS2D
+	2100440
+	s2100440@usls.edu.ph
+	
+
+________________
+
+
+DEPARTMENT OF ACADEMIC AFFAIRS
+
+
+Position
+	Full Name
+	Year, Course, Section
+	Student ID
+	Student Email
+	Department Head
+	KIM IVAN ARIGORAT
+	BSCS3C
+	2302356
+	s2302356@usls.edu.ph
+	Department Undersecretaries
+	JULIAN ANTHONY GROMEA
+	BSCS3A
+	1010019
+	s1010019@usls.edu.ph
+	MANUEL MIRASOL
+	BSCS3C
+	2302827
+	s2302827@usls.edu.ph
+	WYNN PAUL SALCEDO
+	BSCS1C
+	2502053
+	s2502053@usls.edu.ph
+	SAMUEL ESPIÑA
+	BSCS4A
+	2202649
+	s2202649@usls.edu.ph
+	MICHAEL ANDREI JUGADO
+	BSCS3C
+	2302462
+	s2302462@usls.edu.ph
+	
+
+________________
+
+
+DEPARTMENT OF SECRETARIAT AND LOGISTICS
+
+
+Position
+	Full Name
+	Year, Course, Section
+	Student ID
+	Student Email
+	Department Head
+	JOIE RIAN ESPIGAR
+	BSCS2A
+	2201325
+	s2201325@usls.edu.ph
+	Department Undersecretaries
+	EMMANUEL DANE ROJAS
+	BSCS1C
+	2500550
+	s2500550@usls.edu.ph
+	PHLOEM DE LA VEGA
+	BSCS2B
+	2402145
+	s2402145@usls.edu.ph
+	JOHN LLOYD ESCOBAR
+	BSCS3C
+	2100805
+	s2100805@usls.edu.ph
+	JUVELIEN SALAS 
+	BSCS2B
+	2201884
+	s2201884@usls.edu.ph
+	
+
+	GABRIEL OMAR NESTOR
+	BSCS2A
+	1210454
+	s1210454@usls.edu.ph
+	
+
+________________
+
+
+DEPARTMENT OF ADVOCACIES AND FORMATION
+
+
+Position
+	Full Name
+	Year, Course, Section
+	Student ID
+	Student Email
+	Department Head
+	DAWSON KHEMUELLE MOMBAY
+	BSCS2B
+	2402485
+	s2402485@usls.edu.ph
+	Department Undersecretaries
+	JERRI JIOVANNI BUTRON
+	BSCS2B
+	2401633
+	s2401633@usls.edu.ph
+	
+
+________________
+
+
+DEPARTMENT OF CULTURAL AND SPORTS AFFAIRS
+
+
+Position
+	Full Name
+	Year, Course, Section
+	Student ID
+	Student Email
+	Department Head
+	JOPHER EVANN PALMA
+	BSCS3C
+	2100932
+	s2100932@usls.edu.ph
+	Department Undersecretaries
+	JOAN BALLARTA
+	BSCS4C
+	2202436
+	s2202436@usls.edu.ph
+	AL RODGE RENDAL
+	BSCS4C
+	2010379
+	s2010379@usls.edu.ph
+	RUELYN GRACE JOSE
+	BSCS3C
+	2302431
+	s2302431@usls.edu.ph
+	XANDER PORRAS
+	BSCS2A
+	1170149
+	s1170149@usls.edu.ph
+	
+TOTAL NUMBER OF OFFICERS: 39
+
+===== End of Summary =====
