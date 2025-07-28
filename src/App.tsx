@@ -1,21 +1,10 @@
-import React, { useState, useRef, useEffect } from "react"; // Import useRef and useEffect
+import React, { useState } from "react";
 import ChatWindow from "./components/ChatWindow";
 import { motion } from "framer-motion";
-import {
-  Navbar,
-  NavBody,
-  MobileNav,
-  MobileNavHeader,
-  MobileNavToggle,
-  MobileNavMenu,
-} from "./components/ui/resizable-navbar";
 import { TypewriterEffect } from "./components/ui/typewriter-effect";
 import { DraggableCardBody, DraggableCardContainer } from "./components/ui/draggable-cards";
-
-// Import the logo image from src/assets
 import logo from './assets/logo.jpg';
 
-// Import student images
 import academicAffairsImg from './assets/cards/academic-affairs.jpg';
 import advocaciesImg from './assets/cards/advocacies.jpg';
 import budgetImg from './assets/cards/budget.jpg';
@@ -28,16 +17,6 @@ import sportsImg from './assets/cards/sports.jpg';
 import treasurerImg from './assets/cards/treasurer.jpg';
 import vicePresidentImg from './assets/cards/vice-president.jpg';
 
-
-// Dummy data for navigation items (still used for mobile menu)
-const navItems = [
-  { name: "Home", link: "#" },
-  { name: "About", link: "#about" },
-  { name: "Services", link: "#services" },
-  { name: "Contact", link: "#contact" },
-];
-
-// Data for the student cards
 const studentCards = [
   { name: "President", image: presidentImg, role: "President", className: "top-10 left-[20%] rotate-[-5deg]" },
   { name: "Vice President", image: vicePresidentImg, role: "Vice President", className: "top-40 left-[25%] rotate-[-7deg]" },
@@ -52,13 +31,9 @@ const studentCards = [
   { name: "Sports", image: sportsImg, role: "Sports", className: "top-25 left-[60%] rotate-[-9deg]" },
 ];
 
-
 const App: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isNavbarVisible, setIsNavbarVisible] = useState(true); // State for navbar visibility
-  const studentsHeaderRef = useRef<HTMLDivElement>(null); // Ref for the target header section
+  const [showStudents, setShowStudents] = useState(false);
 
-  // Define words for the TypewriterEffect
   const words = [
     { text: "Build" },
     { text: "awesome" },
@@ -71,103 +46,155 @@ const App: React.FC = () => {
     { text: "AI" },
     { text: "Chatbot" },
     { text: "called" },
-    { text: "CoPilot.CS", className: "text-blue-500" }, // This class applies the blue color
+    { text: "CoPilot.CS", className: "text-blue-400" },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (studentsHeaderRef.current) {
-        const headerTop = studentsHeaderRef.current.getBoundingClientRect().top;
-        // The Navbar will hide when the top of the "The Students behind CSS" header
-        // is within 100 pixels from the top of the viewport.
-        const threshold = 100;
-        setIsNavbarVisible(headerTop > threshold);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); // Empty dependency array means this runs once on mount and cleans up on unmount
-
   return (
-    <div className="flex min-h-screen flex-col bg-neutral-900">
-      <motion.div // Wrap Navbar with motion.div for animation
-        initial={{ y: 0 }}
-        animate={{ y: isNavbarVisible ? 0 : -100 }} // Moves the navbar up by 100px to hide it
-        transition={{ duration: 0.3 }}
-        className="fixed top-0 left-0 right-0 z-50 pt-4" // Added pt-4 for padding above the navbar
-      >
-        <Navbar>
-          {/* Desktop Navbar */}
-          <NavBody className="justify-center">
-            <div className="flex items-center justify-center w-full">
-              <img src={logo} alt="Logo" className="h-8 w-auto rounded-full mr-2" />
-              <span className="text-xl font-semibold text-white">Welcome to CoPilot.CS</span>
-            </div>
-          </NavBody>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-black">
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-slate-600 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-1000"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-12 animate-pulse delay-500"></div>
+      </div>
 
-          {/* Mobile Navbar */}
-          <MobileNav>
-            <MobileNavHeader className="justify-center">
-              <div className="flex items-center">
-                <img src={logo} alt="Logo" className="h-6 w-auto rounded-full mr-2" />
-                <span className="text-lg font-semibold text-white">Welcome to CoPilot.CS</span>
-              </div>
-              <MobileNavToggle
-                  isOpen={isMobileMenuOpen}
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                />
-            </MobileNavHeader>
-            <MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
-              {navItems.map((item, idx) => (
-                <a
-                  key={idx}
-                  href={item.link}
-                  className="block px-4 py-2 text-neutral-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </MobileNavMenu>
-          </MobileNav>
-        </Navbar>
-      </motion.div>
-
-      {/* Main Content Area */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
+      <motion.header
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        // Adjusted pt-20 to pt-28 to account for the navbar's padding-top
-        className="flex-1 w-full px-4 md:px-8 lg:px-16 xl:px-60 pt-28 pb-10"
+        transition={{ duration: 0.8 }}
+        className="relative z-10 flex items-center justify-center px-6 py-6"
       >
-        <div className="mt-20 mb-10">
-          <TypewriterEffect words={words} />
+        <div className="flex items-center space-x-4 bg-black/20 backdrop-blur-md rounded-full px-6 py-3 border border-white/30">
+          <img src={logo} alt="CSS USLS Logo" className="h-10 w-10 rounded-full ring-2 ring-white/50" />
+          <div className="text-white">
+            <h1 className="text-lg font-bold">Computer Science Society</h1>
+            <p className="text-sm text-blue-300">University of St. La Salle</p>
+          </div>
         </div>
-        <ChatWindow />
+      </motion.header>
 
-        {/* New Section: The Students behind CSS - Ref attached here for scroll tracking */}
-        <div ref={studentsHeaderRef} className="mt-20 mb-10 text-center">
-          <h2 className="text-4xl font-bold text-white mb-10">The Students behind CSS</h2>
-          <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
-            {studentCards.map((student, index) => (
-              <DraggableCardBody
-                key={index}
-                className={student.className + " absolute flex flex-col items-center justify-center bg-neutral-700 rounded-lg shadow-md min-h-96 w-80"}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center mb-12"
+        >
+          <div className="mb-8">
+            <TypewriterEffect words={words} className="text-4xl md:text-6xl font-bold" />
+          </div>
+          
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.8 }}
+            className="text-xl text-gray-200 max-w-3xl mx-auto mb-8"
+          >
+            Ask me anything about our organization, events, officers, or computer science programs at USLS. 
+            I'm here to help you learn more about our amazing community!
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2, duration: 0.6 }}
+            className="flex flex-wrap justify-center gap-4 mb-12"
+          >
+            <div className="flex items-center space-x-2 bg-blue-600/30 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-400/50">
+              <div className="w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
+              <span className="text-blue-300 text-sm font-medium">AI Powered</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 border border-white/50">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse delay-300"></div>
+              <span className="text-white text-sm font-medium">Real-time Responses</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-slate-600/30 backdrop-blur-sm rounded-full px-4 py-2 border border-slate-400/50">
+              <div className="w-2 h-2 bg-slate-200 rounded-full animate-pulse delay-700"></div>
+              <span className="text-slate-200 text-sm font-medium">Voice Enabled</span>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="max-w-4xl mx-auto mb-16"
+        >
+          <div className="bg-black/20 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl overflow-hidden">
+            <div className="h-[600px]">
+              <ChatWindow />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.6 }}
+          className="text-center"
+        >
+          <button
+            onClick={() => setShowStudents(!showStudents)}
+            className="group bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+          >
+            <span className="flex items-center space-x-2">
+              <span>{showStudents ? 'Hide' : 'Meet'} Our Amazing Team</span>
+              <motion.span
+                animate={{ rotate: showStudents ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-lg"
               >
-                <img
-                  src={student.image}
-                  alt={student.name}
-                  className="w-full h-full object-cover rounded-lg"
-                />
-              </DraggableCardBody>
-            ))}
-          </DraggableCardContainer>
-        </div>
-      </motion.div>
+                ↓
+              </motion.span>
+            </span>
+          </button>
+        </motion.div>
+
+        {showStudents && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mt-16"
+          >
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4">The Students Behind CSS</h2>
+              <p className="text-xl text-gray-300">Our dedicated officers working to build an amazing CS community</p>
+            </div>
+            
+            <div className="bg-black/20 backdrop-blur-xl rounded-3xl border border-white/20 p-8">
+              <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
+                {studentCards.map((student, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                  >
+                    <DraggableCardBody
+                      className={student.className + " absolute flex flex-col items-center justify-center bg-white/15 backdrop-blur-md rounded-xl shadow-2xl border border-white/30 min-h-96 w-80 hover:bg-white/25 transition-all duration-300 group cursor-grab active:cursor-grabbing"}
+                    >
+                      <div className="relative overflow-hidden rounded-lg w-full h-full">
+                        <img
+                          src={student.image}
+                          alt={student.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 right-4 text-white">
+                          <h3 className="font-bold text-lg">{student.name}</h3>
+                          <p className="text-sm text-gray-200">{student.role}</p>
+                        </div>
+                      </div>
+                    </DraggableCardBody>
+                  </motion.div>
+                ))}
+              </DraggableCardContainer>
+            </div>
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 };

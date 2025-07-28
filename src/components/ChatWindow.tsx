@@ -1,7 +1,8 @@
-import React, { useState, useRef } from "react"; // Removed useEffect as it's no longer used
+import React, { useState, useRef, useEffect } from "react";
 import TypingBubble from "./TypingBubble";
 import { askGemini } from "../lib/gemini";
-import { IconUser, IconRobot } from "@tabler/icons-react"; // Import icons for user and bot
+import { IconUser, IconRobot, IconSend, IconTrash } from "@tabler/icons-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ChatMessage {
   sender: "user" | "bot";
@@ -55,86 +56,162 @@ const ChatWindow: React.FC = () => {
     setInput("");
   };
 
-  // Removed the automatic scroll on every message update.
-  // The user can now scroll manually.
-  // If automatic scrolling on new messages is desired,
-  // more sophisticated logic would be needed to check if the user is already at the bottom.
-  // useEffect(() => {
-  //   messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  // }, [messages]);
+  useEffect(() => {
+    messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   return (
-    <div className="relative flex flex-col h-full bg-neutral-100 dark:bg-neutral-900 rounded-lg shadow-lg"> {/* Added h-full and rounded-lg/shadow for better appearance */}
-      {/* Chat Body */}
-      <div className="flex-1 overflow-y-auto px-4 pt-6 pb-2">
-        <div className="max-w-2xl mx-auto flex flex-col gap-4">
-          {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`flex items-start ${ // Added items-start to align icon and message at the top
-                msg.sender === "user" ? "justify-end" : "justify-start"
-              }`}
+    <div className="flex flex-col h-full">
+      {/* Welcome Message */}
+      {messages.length === 0 && (
+        <div className="flex-1 flex items-center justify-center p-8">
+          <div className="text-center max-w-md">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", duration: 0.6 }}
+              className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6"
             >
-              {msg.sender === "bot" && (
-                <div className="flex-shrink-0 mr-2 mt-1"> {/* Icon for bot */}
-                  <IconRobot className="h-6 w-6 text-gray-600 dark:text-gray-300" />
+              <IconRobot className="w-8 h-8 text-white" />
+            </motion.div>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-2xl font-bold text-white mb-3"
+            >
+              Welcome to CoPilot.CS!
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-gray-300 mb-6"
+            >
+              I'm here to help you learn about the Computer Science Society at USLS. 
+              Ask me about our events, officers, programs, or anything CS-related!
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="flex flex-wrap gap-2 justify-center text-sm"
+            >
+              {["Tell me about CSS", "Who are the officers?", "Upcoming events", "CS programs"].map((suggestion) => (
+                <button
+                  key={suggestion}
+                  onClick={() => setInput(suggestion)}
+                  className="px-3 py-1 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white/80 hover:text-white transition-all duration-200"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      )}
+
+      {/* Chat Messages */}
+      {messages.length > 0 && (
+        <div className="flex-1 overflow-y-auto p-6 space-y-4">
+          <AnimatePresence>
+            {messages.map((msg, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className={`flex items-start gap-3 ${
+                  msg.sender === "user" ? "justify-end" : "justify-start"
+                }`}
+              >
+                {msg.sender === "bot" && (
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center">
+                    <IconRobot className="w-4 h-4 text-white" />
+                  </div>
+                )}
+                
+                <div className={`max-w-[80%] ${msg.sender === "user" ? "order-1" : ""}`}>
+                  {msg.sender === "bot" ? (
+                    <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl rounded-tl-md p-4">
+                      <TypingBubble text={msg.text} />
+                    </div>
+                  ) : (
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl rounded-tr-md p-4">
+                      <p className="whitespace-pre-wrap">{msg.text}</p>
+                    </div>
+                  )}
                 </div>
-              )}
-              {msg.sender === "bot" ? (
-                <TypingBubble text={msg.text} />
-              ) : (
-                <div className="bg-blue-500 text-white px-4 py-2 rounded-xl max-w-[80%] text-sm">
-                  <p className="whitespace-pre-wrap">{msg.text}</p>
-                </div>
-              )}
-              {msg.sender === "user" && (
-                <div className="flex-shrink-0 ml-2 mt-1"> {/* Icon for user */}
-                  <IconUser className="h-6 w-6 text-blue-600 dark:text-blue-300" />
-                </div>
-              )}
-            </div>
-          ))}
+
+                {msg.sender === "user" && (
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-slate-600 to-slate-800 rounded-full flex items-center justify-center order-2">
+                    <IconUser className="w-4 h-4 text-white" />
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </AnimatePresence>
+
           {isLoading && (
-            <div className={`flex ${messages.length > 0 && messages[messages.length - 1].sender === "user" ? "justify-start" : "justify-start"} items-center`}>
-              {/* Show bot icon when thinking */}
-              <div className="flex-shrink-0 mr-2 mt-1">
-                 <IconRobot className="h-6 w-6 text-gray-600 dark:text-gray-300" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-start gap-3"
+            >
+              <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center">
+                <IconRobot className="w-4 h-4 text-white" />
               </div>
-              <div className="text-sm text-gray-400 italic">Thinking...</div>
-            </div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl rounded-tl-md p-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse delay-100"></div>
+                    <div className="w-2 h-2 bg-slate-400 rounded-full animate-pulse delay-200"></div>
+                  </div>
+                  <span className="text-gray-300 text-sm">Thinking...</span>
+                </div>
+              </div>
+            </motion.div>
           )}
           <div ref={messageEndRef} />
         </div>
-      </div>
+      )}
 
-      {/* Input Bar with Clear Button on Left */}
-      <div className="sticky bottom-0 w-full px-4 pb-6 pt-2 bg-transparent">
-        <div className="max-w-2xl mx-auto flex items-center gap-2">
-          <button
-            onClick={clearChat}
-            className="text-sm font-medium px-3 py-2 rounded-full bg-white text-black opacity-50 hover:opacity-100 transition border border-gray-300 dark:bg-neutral-700 dark:text-white dark:border-gray-600"
-          >
-            Clear
-          </button>
-          <input
-            type="text"
-            className="flex-grow px-4 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-neutral-700 dark:text-white"
-            placeholder="Ask me about the CS Society of USLS..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyPress}
-            disabled={isLoading}
-          />
+      {/* Input Area */}
+      <div className="p-6 border-t border-white/10">
+        <div className="flex items-center gap-3">
+          {messages.length > 0 && (
+            <button
+              onClick={clearChat}
+              className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-all duration-200"
+              title="Clear chat"
+            >
+              <IconTrash className="w-5 h-5" />
+            </button>
+          )}
+          
+          <div className="flex-1 relative">
+            <input
+              type="text"
+              className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-transparent transition-all duration-200"
+              placeholder="Ask me anything about CSS USLS..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyPress}
+              disabled={isLoading}
+            />
+          </div>
+          
           <button
             onClick={handleSend}
-            disabled={isLoading}
-            className={`text-white text-sm font-medium px-4 py-2 rounded-full transition ${
-              isLoading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-500 hover:bg-blue-600"
+            disabled={isLoading || !input.trim()}
+            className={`p-3 rounded-full transition-all duration-200 ${
+              isLoading || !input.trim()
+                ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+                : "bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white hover:scale-105"
             }`}
           >
-            ➤
+            <IconSend className="w-5 h-5" />
           </button>
         </div>
       </div>
