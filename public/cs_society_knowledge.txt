@@ -159,28 +159,18 @@ EXECUTIVE OFFICERS
 Position
 	Full Name
 	Year, Course, Section
-	Student ID
-	Student Email
 	Executive President
 	LYNCOLIN DELIGERO
 	BSCS4B
-	2202108
-	s2202108@usls.edu.ph
 	Executive Vice-President
 	MIKAELLA BEA FUENTEBELLA
 	BSCS3C
-	2100900
-	s2100900@usls.edu.ph
 	Executive Secretary
 	ARWEN MICA ELLE PEREZ
 	BSCS2B
-	2401940
-	s2401940@usls.edu.ph
 	Executive Treasurer
 	WILFREDO PEREZ III
 	BSCS2A
-	2201837
-	s2201837@usls.edu.ph
 	
 
 ________________
@@ -192,34 +182,20 @@ DEPARTMENT OF HUMAN RELATIONS
 Position
 	Full Name
 	Year, Course, Section
-	Student ID
-	Student Email
 	Department Head
 	JOHN LEONARD ESPERANCILLA
 	BSCS4A
-	2010011
-	s2010011@usls.edu.ph
 	Department Undersecretaries
 	DYNZYL JAMES GANCHOON
 	BSCS4C
-	2200422
-	s2200422@usls.edu.ph
 	ALEAH JELEIN AREVALO
 	BSCS4C
-	1617074
-	s1617074@usls.edu.ph
 	ANDREW EROYLA
 	BSCS3B
-	2301947
-	s2301947@usls.edu.ph
 	JOSEPH ANDREW ONG
 	BSCS3B
-	2302124
-	s2302124@usls.edu.ph
 	CHRISTIAN MARIE ESPINOSA
 	BSCS2A
-	2400761
-	s2400761@usls.edu.ph
 	
 
 ________________
@@ -231,30 +207,18 @@ DEPARTMENT OF BUDGET AND FINANCE
 Position
 	Full Name
 	Year, Course, Section
-	Student ID
-	Student Email
 	Department Head
 	STALINGRAD DOLLOSA
 	BSCS4A
-	2120770
-	s2120770@usls.edu.ph
 	Department Undersecretaries
 	KHENJE TERNAL
 	BSCS2B
-	2401600
-	s2401600@usls.edu.ph
 	EMMAN GLEN WONG YAN
 	BSCS2B
-	2401875
-	s2401875@usls.edu.ph
 	RCYNDRIEL LEVAUGN PORTUGAL
 	BSCS1C
-	2100331
-	s2100331@usls.edu.ph
 	JOHN DAVID MORANDANTE
 	BSCS2B
-	2401838
-	s2401838@usls.edu.ph
 	
 
 ________________
@@ -266,34 +230,20 @@ DEPARTMENT OF PUBLIC RELATIONS
 Position
 	Full Name
 	Year, Course, Section
-	Student ID
-	Student Email
 	Department Co-Heads
 	NATHANIEL MANUEL CUALES
 	BSCS2A
-	2400569
-	s2400569@usls.edu.ph
 	JOSH DANE LABISTRE
 	BSCS3A
-	2300337
-	s2300337@usls.edu.ph
 	Department Undersecretaries
 	ALFRED ALCALA
 	BSCS3A
-	2100626
-	s2100626@usls.edu.ph
 	VAN RUSSEL CATAYONG
 	BSCS2B
-	2402190
-	s2402190@usls.edu.ph
 	LEIAN JOSHUA TOGORES
 	BSCS3A
-	2300392
-	s2300392@usls.edu.ph
 	CIELO MARIE ABETONG
 	BSCS2D
-	2100440
-	s2100440@usls.edu.ph
 	
 
 ________________
@@ -305,34 +255,20 @@ DEPARTMENT OF ACADEMIC AFFAIRS
 Position
 	Full Name
 	Year, Course, Section
-	Student ID
-	Student Email
 	Department Head
 	KIM IVAN ARIGORAT
 	BSCS3C
-	2302356
-	s2302356@usls.edu.ph
 	Department Undersecretaries
 	JULIAN ANTHONY GROMEA
 	BSCS3A
-	1010019
-	s1010019@usls.edu.ph
 	MANUEL MIRASOL
 	BSCS3C
-	2302827
-	s2302827@usls.edu.ph
 	WYNN PAUL SALCEDO
 	BSCS1C
-	2502053
-	s2502053@usls.edu.ph
 	SAMUEL ESPIÑA
 	BSCS4A
-	2202649
-	s2202649@usls.edu.ph
 	MICHAEL ANDREI JUGADO
 	BSCS3C
-	2302462
-	s2302462@usls.edu.ph
 	
 
 ________________
@@ -344,36 +280,20 @@ DEPARTMENT OF SECRETARIAT AND LOGISTICS
 Position
 	Full Name
 	Year, Course, Section
-	Student ID
-	Student Email
 	Department Head
 	JOIE RIAN ESPIGAR
 	BSCS2A
-	2201325
-	s2201325@usls.edu.ph
 	Department Undersecretaries
 	EMMANUEL DANE ROJAS
 	BSCS1C
-	2500550
-	s2500550@usls.edu.ph
 	PHLOEM DE LA VEGA
 	BSCS2B
-	2402145
-	s2402145@usls.edu.ph
 	JOHN LLOYD ESCOBAR
 	BSCS3C
-	2100805
-	s2100805@usls.edu.ph
 	JUVELIEN SALAS 
 	BSCS2B
-	2201884
-	s2201884@usls.edu.ph
-	
-
 	GABRIEL OMAR NESTOR
 	BSCS2A
-	1210454
-	s1210454@usls.edu.ph
 	
 
 ________________
@@ -385,18 +305,12 @@ DEPARTMENT OF ADVOCACIES AND FORMATION
 Position
 	Full Name
 	Year, Course, Section
-	Student ID
-	Student Email
 	Department Head
 	DAWSON KHEMUELLE MOMBAY
 	BSCS2B
-	2402485
-	s2402485@usls.edu.ph
 	Department Undersecretaries
 	JERRI JIOVANNI BUTRON
 	BSCS2B
-	2401633
-	s2401633@usls.edu.ph
 	
 
 ________________
@@ -408,30 +322,18 @@ DEPARTMENT OF CULTURAL AND SPORTS AFFAIRS
 Position
 	Full Name
 	Year, Course, Section
-	Student ID
-	Student Email
 	Department Head
 	JOPHER EVANN PALMA
 	BSCS3C
-	2100932
-	s2100932@usls.edu.ph
 	Department Undersecretaries
 	JOAN BALLARTA
 	BSCS4C
-	2202436
-	s2202436@usls.edu.ph
 	AL RODGE RENDAL
 	BSCS4C
-	2010379
-	s2010379@usls.edu.ph
 	RUELYN GRACE JOSE
 	BSCS3C
-	2302431
-	s2302431@usls.edu.ph
 	XANDER PORRAS
 	BSCS2A
-	1170149
-	s1170149@usls.edu.ph
 	
 TOTAL NUMBER OF OFFICERS: 39
 
