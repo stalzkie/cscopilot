@@ -6,10 +6,10 @@ interface TypingBubbleProps {
 }
 
 const TypingBubble: React.FC<TypingBubbleProps> = ({ text }) => {
-  const typedText = useTypewriter(text, 40); // Adjust speed if needed
+  const typedText = useTypewriter(text, 25); // Reduced from 40ms to 25ms for faster typing
 
   return (
-    <div className="bg-blue-100 text-blue-900 px-4 py-2 rounded-lg max-w-[80%] my-2">
+    <div className="text-gray-100">
       <p style={{ whiteSpace: "pre-wrap" }}>{typedText}</p>
     </div>
   );
